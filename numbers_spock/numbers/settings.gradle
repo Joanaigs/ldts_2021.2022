@@ -1,0 +1,4 @@
+rootProject.name = 'numbers'
+include 'src:test:Specification'
+findProject(':src:test:Specification')?.name = 'Specification'
+
