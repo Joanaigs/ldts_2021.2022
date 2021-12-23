@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FirstSpecification" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-11-23T15:06:24" hostname="LENOVO" time="0.353">
+  <properties/>
+  <testcase name="Should verify notify was called" classname="FirstSpecification" time="0.353">
+    <failure message="groovy.lang.MissingMethodException: No signature of method: com.aor.numbers.Notifier$SpockMock$591296580.notify() is applicable for argument types: (String) values: [foo]&#10;Possible solutions: notify(), notifyAll(), wait(), getAt(java.lang.String)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.aor.numbers.Notifier$SpockMock$591296580.notify() is applicable for argument types: (String) values: [foo]
+Possible solutions: notify(), notifyAll(), wait(), getAt(java.lang.String)
+	at FirstSpecification.Should verify notify was called(FirstSpecification.groovy:19)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,11 +1,24 @@
+import com.aor.numbers.GenericListDeduplicator
+import com.aor.numbers.Notifier
+import spock.lang.Specification
+
 class FirstSpecification extends Specification{
-    def "two plus two should equal four"() {
+    def "distinct_bug_8726"(){
         given:
-        int left = 2
-        int right = 2
+            def deduplicator = Mock(GenericListDeduplicator)
+            deduplicator.deduplicate(Arrays.asList(1, 2, 4, 2)) >> Arrays.asList(1, 2, 4)
         when:
-        int result = left + right
+            def result = deduplicator.deduplicate(Arrays.asList(1, 2, 4, 2))
         then:
-        result == 4
+            result == Arrays.asList(1,2,4)
     }
+    def "Should verify notify was called"() {
+        given:
+        def notifier = Mock(Notifier)
+        when:
+        notifier.notify('foo')
+        then:
+        1 * notifier.notify('foo')
+    }
+
 }
